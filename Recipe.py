@@ -13,7 +13,8 @@ def recipe_print():
     base_layer_data = data['base_layer']
     shell_data = data['shell']
 
-document = docx.Document()
-document.add_paragraph('Random Taco Cookbook', 'Title')
-document.save('Taco Final')
+    document = docx.Document()
+    document.add_paragraph('Random Taco Cookbook', 'Title')
+    document.add_picture('Omega Taco.jpg')
+    document.save('Taco Final')
 
