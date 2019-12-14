@@ -1,9 +1,12 @@
-import requests, docx
+import requests, docx           # These are the libraries that are used in the files to create them in Python
 
+
+'''Down here, I will create the function that will get the taco API and find the specific parts to 
+take to the Word Document that will be created.'''
 
 def recipe_print():
 
-    data = requests.get('https://taco-1150.herokuapp.com/random/?full_taco=true').json()
+    data = requests.get('https://taco-1150.herokuapp.com/random/?full_taco=true').json()    # This is the API where I get the random taco recipes
     seasoning_data = data['seasoning']
     condiment_data = data['condiment']
     mixin_data = data['mixin']
