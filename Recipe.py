@@ -9,10 +9,8 @@ def recipe_print():
     mixin_data = data['mixin']
     base_layer_data = data['base_layer']
     shell_data = data['shell']
-    document = docx.Document('Random Taco Cookbook')
-    document.add_paragraph(seasoning_data)
-    document.save('Taco Final')
 
+document = docx.Document()
+document.add_paragraph('Random Taco Cookbook', 'Title')
+document.save('Taco Final')
 
-    for book in range(3):
-        recipe_print()
