@@ -6,8 +6,10 @@ take to the Word Document that will be created.'''
 
 def recipe_print():
 
+
+
     data = requests.get('https://taco-1150.herokuapp.com/random/?full_taco=true').json()    # This is the API where I get the random taco recipes
-    seasoning_data = data["seasoning"]['recipe']
+    seasoning_data = data["seasoning"]['recipe']    #T This is where I get the
     condiment_data = data ['condiment']['recipe']
     mixin_data = data ['mixin']['recipe']
     base_layer_data = data ['base_layer']['recipe']
@@ -22,6 +24,9 @@ def recipe_print():
     document.add_paragraph('Code created by: Paul Snowdey Jr.')
     document.add_paragraph(seasoning_data, 'Title')
     document.add_paragraph(mixin_data)
+    document.add_paragraph(base_layer_data)
+    document.add_paragraph(shell_data)
+
 
 
     document.save('TacoFinish.docx')
