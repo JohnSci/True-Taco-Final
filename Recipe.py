@@ -21,26 +21,26 @@ def recipe_print():
     shell_name = data['shell']['name']              # This is where I get the name of the shell
 
     # This is where the document is made and where I piece each thing together
-    document = docx.Document()
-    document.add_paragraph('Random Taco Cookbook', 'Title')     # That is the name of the taco cookbook
-    document.add_picture('Omega Tacos.jpg')     # This is my edited image I received from Unsplash
-    document.add_paragraph('Picture by: Jason Leung')   # Citing the photographer of the image
-    document.add_paragraph('Recipes found at: https://taco-1150.herokuapp.com/random/?full_taco=true')  # Citing the API that creates the recipes
-    document.add_paragraph('Code created by: Paul Snowdey Jr.')
-    document.add_page_break()       # This is where the recipes will start
-    document.add_paragraph(seasoning_name, 'Title')
-    document.add_paragraph(seasoning_data)
-    document.add_paragraph(mixin_name, 'Title')
-    document.add_paragraph(mixin_data)
-    document.add_paragraph(base_name, 'Title')
-    document.add_paragraph(base_layer_data)
-    document.add_paragraph(shell_name, 'Title')
-    document.add_paragraph(shell_data)
-    document.add_page_break()
-    document.add_paragraph
+    while True:
+        document = docx.Document()
+        document.add_paragraph('Random Taco Cookbook', 'Title')     # That is the name of the taco cookbook
+        document.add_picture('Omega Tacos.jpg')     # This is my edited image I received from Unsplash
+        document.add_paragraph('Picture by: Jason Leung')   # Citing the photographer of the image
+        document.add_paragraph('Recipes found at: https://taco-1150.herokuapp.com/random/?full_taco=true')  # Citing the API that creates the recipes
+        document.add_paragraph('Code created by: Paul Snowdey Jr.')
+        document.add_page_break()       # This is where the recipes will start
+        document.add_paragraph(seasoning_name, 'Title')
+        document.add_paragraph(seasoning_data)
+        document.add_paragraph(mixin_name, 'Title')
+        document.add_paragraph(mixin_data)
+        document.add_paragraph(base_name, 'Title')
+        document.add_paragraph(base_layer_data)
+        document.add_paragraph(shell_name, 'Title')
+        document.add_paragraph(shell_data)
+        document.add_page_break()
+        document.add_paragraph
 
 
-    document.save('TacoFinish.docx')
+        document.save('TacoFinish.docx')
 
-for taco in range(3):
-    recipe_print()
+recipe_print()
