@@ -18,7 +18,7 @@ def recipe_print():
 
     document = docx.Document()
     document.add_paragraph('Random Taco Cookbook', 'Title')
-    document.add_picture('Omega Taco.jpg', width=docx.shared.Inches(3), height=docx.shared.Inches(3))
+    document.add_picture('Omega Tacos.jpg')
     document.add_paragraph('Picture by: Jason Leung')
     document.add_paragraph('Recipes found at: https://taco-1150.herokuapp.com/random/?full_taco=true')
     document.add_paragraph('Code created by: Paul Snowdey Jr.')
